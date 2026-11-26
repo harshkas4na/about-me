@@ -8,12 +8,19 @@ It is a stub — the first ticket on the board fills it in.
 
 ## Project
 
-_What is this, in a sentence or two?_
+A static, dark, one-page About Me site for Harsh Kasana (Forward Deployed Engineer). Plain HTML and CSS — no framework, no build step, no database, no analytics. Sections in order: intro, what-i-do, projects, contact.
+
+Files: `index.html` (content), `style.css` (all styling).
 
 ## Commands
 
-_How do you run it, test it, and build it?_
+- **Preview:** open `index.html` directly in a browser, or serve it: `python3 -m http.server 8000` then visit http://localhost:8000.
+- **Build:** none. **Tests:** none; verify with the project skill `.claude/skills/verify-about-me/SKILL.md`.
 
 ## Conventions
 
-_Anything a new contributor would get wrong on their first try._
+- Keep it dependency-free: no JS frameworks, no external fonts/icons/CDNs, no `<script>` unless truly needed. System font stack only.
+- Colors live as CSS variables in `:root` of `style.css`; use the single mint accent (`--accent`) for links/highlights.
+- Each section is a `<section id="intro|what-i-do|projects|contact">`; keep ids stable (the verification skill's feature map relies on them).
+- ReacDEFI and JobOps intentionally have no links; only Hashtro links out.
+- Must work when opened via `file://` — use relative asset paths only.

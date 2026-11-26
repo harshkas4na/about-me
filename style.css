@@ -1,0 +1,48 @@
+:root {
+  --bg: #0a0a0c;
+  --card: #121216;
+  --border: #23232a;
+  --text: #e8e8ec;
+  --muted: #9a9aa6;
+  --accent: #5eead4;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+main { max-width: 42rem; margin: 0 auto; padding: 5rem 1.5rem 6rem; }
+section { margin-bottom: 4.5rem; }
+h1 { font-size: clamp(2.25rem, 7vw, 3.25rem); line-height: 1.1; margin: 0 0 0.5rem; letter-spacing: -0.02em; }
+.role { color: var(--accent); font-weight: 600; margin: 0 0 1.5rem; }
+.lede { color: var(--muted); font-size: 1.1875rem; margin: 0; }
+h2 {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  font-weight: 600;
+  margin: 0 0 1.25rem;
+}
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover, a:focus-visible { text-decoration-thickness: 2px; }
+.do-list { margin: 0; padding-left: 1.25rem; }
+.do-list li { margin-bottom: 0.6rem; }
+.do-list li::marker { color: var(--accent); }
+.cards { display: grid; gap: 1rem; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; }
+.card h3 { margin: 0 0 0.35rem; font-size: 1.125rem; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover, .card h3 a:focus-visible { text-decoration: underline; }
+.card p { margin: 0; color: var(--muted); }
+.contact-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.75rem 1.75rem; }
+@media (max-width: 480px) {
+  main { padding: 3rem 1.25rem 4rem; }
+  section { margin-bottom: 3.5rem; }
+}
